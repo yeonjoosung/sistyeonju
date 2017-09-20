@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+
+<link rel='stylesheet prefetch'
+	href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+<link rel="stylesheet" href="../css/modalstyle.css">
+<script>    
+        //$(document.ready(function(){ .. });
+        $(function(){
+            $("#success").dialog();
+        });
+    </script>
+
+</head>
+
+<body>
+
+	<!-- Button -->
+	<div class="page-wrapper">
+		<a class="btn trigger" href="#">click me</a>
+	</div>
+
+	<!-- Modal -->
+	<div id="success" class="modal-wrapper">
+		<div class="modal">
+			<div class="modal-top">
+				<a class="btn-close trigger" href="#"> <i class="fa fa-times"
+					aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="content">
+				<div class="good-job">
+					<i class="" aria-hidden="true"></i>
+					<h1>베품 회원가입을 환영합니다!</h1>
+					<br/>로그인후 이용해주세요.
+					<a class="btn-close trigger" href="index.html" style="color: black;">
+					<i class="fa fa-times" aria-hidden="true"></i>
+				</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+
+	<!-- <script src="../js/modal.js"></script> -->
+
+</body>
+</html>

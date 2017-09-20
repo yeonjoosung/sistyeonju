@@ -1,0 +1,83 @@
+/* =============================================
+* check BUTTONS
+=============================================== */
+#checkday{
+	background-color: #3367D6;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	text-align: center;
+}
+#checkday label {
+	cursor: pointer;
+	position: relative;
+}
+
+#checkday label + label {
+	margin-left: 15px;
+}
+
+input[type="checkbox"] {
+	opacity: 0; /* hidden but still tabable */
+	position: absolute;
+}
+
+/* input[type="checkbox"] + span {
+	font-family: 'Material Icons';
+	color: #B3CEFB;
+	border-radius: 50%;
+	padding: 2px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+}
+ */
+input[type="checkbox"]:checked + span {
+	color: #D9E7FD;
+  background-color: #4285F4;
+}
+
+input[type="checkbox"]:focus + span {
+	color: #fff;
+}
+
+/* ================ TOOLTIPS ================= */
+
+#checkday label:hover::before {
+	content: attr(for);
+	font-family: Roboto, -apple-system, sans-serif;
+	text-transform: capitalize;
+	font-size: 9px;
+	position: absolute;
+	top: 170%;
+	left: 0;
+	right: 0;
+	opacity: 0.75;
+	background-color: #323232;
+	color: #fff;	
+	padding: 4px;
+	border-radius: 3px;
+  	display: block;
+}
+
+/* =============================================
+* CENTERING, CONTAINER STYLING ETC || IGNORE
+=============================================== */
+
+
+#checkday {
+	text-align: center;
+	margin: auto;
+}
+
+.day-of-week {
+	margin: 0 auto;
+}
+
+/* html {
+	height: 100%;
+	font-family: Roboto, -apple-system, sans-serif;
+}
+ */
+body {
+	
+}

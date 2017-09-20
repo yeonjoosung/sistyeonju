@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+ $(function(){
+  //id="btn" 클릭시
+  $("#btn").click(function(){
+   //id="text1"이 공백일경우
+   if($('#text1').val()==""){
+    //얼럿으로처리
+    alert("텍스트1번을 입력해주세요");
+    //id="text1"인 곳으로 커서를 이동
+    $('#text1').focus();
+    return;
+   }
+   if($('#text2').val()==""){
+    alert("텍스트2번을 입력해주세요");
+    $('#text2').focus();
+    return;
+   }
+   //둘다 입력이 되었을경우 버튼 클릭시.
+   alert("둘다입력완료!!");
+  });
+ });
+</script>
+
+</head>
+<body>
+<font color="red">!</font>표시는 필수 입력사항 입니다.
+ <table border=1>
+  <tr>
+   <td><font color="red">!</font>아이디</td>
+   <td><input type="text" id="text1" /><br/></td>
+  </tr>
+  <tr>
+   <td><font color="red">!</font>이름</td>
+   <td><input type="text" id="text2" /></td>
+  </tr>
+  <tr>
+   <td colspan="2" align="center">
+    <input type="button" id="btn" value="등록" />
+   </td>
+  </tr>
+ </table> 
+
+</body>
+</html>

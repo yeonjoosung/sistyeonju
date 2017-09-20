@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>JS | Simple Modal Box Snippet</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <a href="#" class="modal-trigger" data-modal="modal-name">회원탈퇴</a> <!-- Trigger Modal. -->
+<!-- Modal -->
+<div class="modal" id="modal-name">
+  <div class="modal-sandbox"></div>
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="close-modal">&#10006;</div> 
+      <h1>회원탈퇴</h1>
+    </div>
+    <div class="modal-body">
+      <p>정말 탈퇴 하시겠습니까?</p>
+      <p>정말 탈퇴 하시겠습니까?</p>
+      <br />
+      <button class="close-modal">Close!</button>
+    </div>
+  </div>
+</div>
+
+<!-- Aditional Styles -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+
+     <script>
+    $(".modal-trigger").click(function(e){
+    	  e.preventDefault();
+    	  dataModal = $(this).attr("data-modal");
+    	  $("#" + dataModal).css({"display":"block"});
+    	});
+
+    	$(".close-modal, .modal-sandbox").click(function(){
+    	  $(".modal").css({"display":"none"});
+    	});
+    
+    </script>
+
+</body>
+</html>

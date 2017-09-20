@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+body {
+  font-family:'Lato';
+  letter-spacing:1px;
+  margin:0;
+  padding:0;
+  background-color:#ea7474;
+}
+
+.container {
+  position:fixed;
+  top:10%;
+  left:50%;
+  margin-left:-180px;
+}
+
+.profil, ul {
+  font-weight:bold;
+  background-color:#f2ecec;
+  border-radius:8px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  color:#b8a7a7;
+  text-transform:uppercase;
+  box-shadow:0 5px 14px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow:0 5px 14px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow:0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.profil {
+  width:310px;
+  display:block;
+  
+  &:before {
+    content:"\e722";
+    font-weight:100;
+    position:absolute;
+    right:36px;
+    top:16px;
+    font-size:22px;
+    font-family:'entypo';
+  }
+}
+
+.profil, ul li {
+  cursor:pointer;
+  padding:18px 15px;
+  position:relative;
+  transition:all .4s;
+  -webkit-transition:all .4s;
+  -moz-transition:all .4s;
+  
+  &:hover {
+    background-color:#c5b1b1;
+    color:#f7e989;
+    transition:all .4s;
+    -webkit-transition:all .4s;
+    -moz-transition:all .4s;
+  }
+}
+
+ul {
+  opacity:0;
+  width:340px;
+  padding:0;
+  list-style:none;
+  position:relative;
+  z-index:-1;
+  
+  & li:first-child {
+    border-radius:8px 8px 0 0;
+    -webkit-border-radius:8px 8px 0 0;
+    -moz-border-radius:8px 8px 0 0;
+  }
+  
+  & li:last-child {
+    border-radius:0 0 8px 8px;
+    -webkit-border-radius:0 0 8px 8px;
+    -moz-border-radius:0 0 8px 8px;
+  }
+  
+  &:before {
+    content:'';
+    position: absolute;
+    top: -16px;
+    right: 50px;
+    border-style: solid;
+    border-width: 0 14px 16px 14px;
+    border-color: rgba(0, 0, 0, 0) rgba(243, 243, 243, 0) #f2ecec rgba(0, 0, 0, 0);
+  }
+  
+  & li:before {
+    font-family:'entypo';
+    font-weight:100;
+    font-size:22px;
+    position:absolute;
+    top:16px;
+    right:36px;
+  }
+  
+  & li:first-child:before {content:"\f31b";}
+  & li:nth-child(2):before {content:"\e756";}
+  & li:nth-child(3):before {content:"\e005";}
+  & li:nth-child(4):before {content:"\1f53e";}
+  & li:nth-child(5):before {content:"\2699";}
+  & li:last-child:before {content:"\e741";}
+}
